@@ -1,0 +1,21 @@
+---
+layout: page
+title: @ch3sh1r blogs.
+---
+{% include JB/setup %}
+
+<article>
+  <i><time datetime="{{ site.posts.first.date | xmlschema }}">{{ site.posts.first.date | date: "%d %b" }}</time></i>
+  <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+  {{ site.posts.first.content }}
+</article>
+<hr>
+<h2 align="center">Archive</h2>
+<ol id="archive">
+  {% for post in site.posts offset:1 %}
+    <li>
+      <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+    </li>
+  {% endfor %}
+</ol>

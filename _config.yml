@@ -1,0 +1,33 @@
+permalink: /:categories/:year/:month/:day/:title 
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+auto: true
+pygments: true
+
+title : @ch3sh1r blogs.
+tagline: We are all mad here.
+author :
+  name : Alexey Bednyakov
+  email : cheshir.box@gmal.com
+  github : ch3ch1r
+  twitter : ch3sh1r
+  feedburner : http://feeds.feedburner.com/chesh1r
+
+production_url : http://ch3sh1r.github.com
+
+JB :
+  version : 0.2.0
+  BASE_PATH : false
+  ASSET_PATH : false
+  archive_path: /archive.html
+  tags_path : /tags.html
+  comments :
+    provider : disqus
+    disqus :
+      short_name : ch3sh1r
+  analytics :
+    provider : google
+    google : 
+        tracking_id : 'UA-15847973-2'
+  sharing :
+    provider : false
+
