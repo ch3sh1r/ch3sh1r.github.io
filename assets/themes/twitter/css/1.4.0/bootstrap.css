@@ -225,7 +225,7 @@ table .headerSortUp.red,table .headerSortDown.red{background-color:#f4c8c5;}
 table .yellow{color:#ffc40d;border-bottom-color:#ffc40d;}
 table .headerSortUp.yellow,table .headerSortDown.yellow{background-color:#fff6d9;}
 table .orange{color:#f89406;border-bottom-color:#f89406;}
-table .headerSortUp.orange,table .headerSortDown.orange{background-color:#fee9cc;}
+table .headerSortUp.orange,table .headerSortDown.orange{background-color:#ffffff;}
 table .purple{color:#7a43b6;border-bottom-color:#7a43b6;}
 table .headerSortUp.purple,table .headerSortDown.purple{background-color:#e2d5f0;}
 .topbar{height:40px;position:fixed;top:0;left:0;right:0;z-index:10000;overflow:visible;}.topbar a{color:#bfbfbf;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);}
