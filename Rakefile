@@ -6,9 +6,9 @@ desc "Draft a new post"
 task :draft do
   puts "What should we call this post for now?"
   name = STDIN.gets.chomp
-  FileUtils.touch("_drafts/#{name}.md")
+  FileUtils.touch("_drafts/#{name}.markdown")
 
-  open("_drafts/#{name}.md", 'a') do |post|
+  open("_drafts/#{name}.markdown", 'a') do |post|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"DRAFT: #{name}\""
@@ -23,7 +23,7 @@ desc "Begin a new post"
 task :post do
   puts "What should we call this post for now?"
   name = STDIN.gets.chomp
-  filename = File.join('_posts/', "#{Time.now.strftime('%Y-%m-%d')}-#{name}.md")
+  filename = File.join('_posts/', "#{Time.now.strftime('%Y-%m-%d')}-#{name}.markdown")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -42,7 +42,7 @@ end
 
 desc "Create a new page"
 task :page do
-  name = ENV["name"] || "new-page.md"
+  name = ENV["name"] || "new-page.markdown"
   filename = File.join(".", "#{name}")
   filename = File.join(filename, "index.html") if File.extname(filename) == ""
   title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
