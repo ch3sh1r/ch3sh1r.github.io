@@ -1,63 +1,72 @@
----
-theme :
-  name : twitter
----
 {% include setup %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-
-    <!-- styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-
-    <!-- fav and touch icons -->
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/carousel.css" rel="stylesheet">
+    <style type="text/css" id="holderjs-style">
+        .holderjs-fluid {font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}
+    </style>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <!--<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">-->
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png">
   </head>
-
   <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include pages_list %}
-          </ul>
+    {% if page.type == "index" %}
+        {% include carousel %}
+    {% endif %}
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+            <ul class="nav">
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include pages_list %}
+              <li><a href="http://feeds.feedburner.com/ch3sh1r"> 
+                  <i class="icon-bookmark"></i> RSS
+              </a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-
+    </div><!-- /.navbar -->
     <div class="container">
-      <div class="content">
+      <div class="featurette">
         {{ content }}
       </div>
-      <footer>
-        <p>{{ site.author.name }}, 2013 
-        | <a href="http://feeds.feedburner.com/ch3sh1r"> 
-            <img src="data:image/png;base64,
-            iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-            bWFnZVJlYWR5ccllPAAAAbBJREFUeNpEkj9IW1EUxr973817STHwRGwVUZAYQSi0iFvpkKJDBzdt
-            pwrFQTqUgJN/x1qok5M4iEM7FcGh7dIl7pZScBYVl6QUEiVNfHk373rOieiFw70PvnPO73znqauF
-            /FOVyZYoQmgP8AygFKDp1oqeGs4lwP/LWlItFzSLAYR6cAwwKSCOABsDbY62iDlJZXtCFT4sGRg/
-            pARk3m3zBVctI/7zE/boO1yrKWJwFyqiurpDVV994ZyNYEYmoHPjMGPPoPtycLUKov2PSP6ei1g6
-            ErJmZkW8LE7OjtHceY/o6wdqmUXwZgOqd7Ajti0gaVOCDOjBL8wh/XYTD4p7ghB9WRPE9MwKkPLh
-            ZCZLCewGdWl8eoXo25aIgtllHhKtg02o7j6YJ5N3Rmi2TtiIm09zd1H4/al52ONDMSE1/lISHHcQ
-            FzwPwet1BNNFeDR8q/RZKuuhx4h//YAeGCV+Sxa6DhInJZVTuOs62ie/JfjoR8NI/l103v15gG2u
-            Lz2v8lLurCM3ZEB7G1TZ0QL5Vn6mZnjdyiUlle7q/BrGv18WfxOGYhwb11zUKNwIMABvfratVtWY
-            2AAAAABJRU5ErkJggg==" width="11px" height="11px" /> RSS
-        </a>
-        </p>
-      </footer>
-    </div>
+      <!--<footer>-->
+        <!--TODO: Add some of footer.-->
+      <!--</footer>-->
+    </div><!-- /.container -->
     {% include analytics %}
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/holder.js"></script>
   </body>
 </html>
