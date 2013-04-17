@@ -4,11 +4,12 @@
           <img src="img/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, 
-egestas eget quam. Donec id elit non mi porta gravida at eget metus. 
-Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>[jdege] Введение</h1>
+                <p class="lead">
+                  Базовая идея курса состоит в том, что создание программ-кирпичиков для решения
+                  собственных задач и программирование для решения задач чужих — две большие разницы.
+                </p>
+              <a class="btn btn-large btn-primary" href="/2012/03/02/1_intro">Подробнее...</a>
             </div>
           </div>
         </div>
@@ -16,11 +17,13 @@ Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           <img src="img/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, 
-egestas eget quam. Donec id elit non mi porta gravida at eget metus. 
-Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <h1>[jdege] Python</h1>
+                <p class="lead">
+                  Существует широкий класс задач, общий для разных программ. Отсюда необходимость в 
+                  возможности писать код, обслуживающий такие задачи, и использовать его в других 
+                  приложениях без применения копипаста.
+                </p>
+              <a class="btn btn-large btn-primary" href="#">Подробнее...</a>
             </div>
           </div>
         </div>
@@ -28,11 +31,13 @@ Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           <img src="img/slide-03.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, 
-egestas eget quam. Donec id elit non mi porta gravida at eget metus. 
-Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+              <h1>[jdege] Криптография</h1>
+                <p class="lead">
+                  Ключом является перемешанный алфавит, записанный в матрицу 3х8, столбцы  
+                  которой нумеруются случайным образом восемью однозначными числами, два
+                  оставшихся числа приписываются двум последним строкам.
+                </p>
+              <a class="btn btn-large btn-primary" href="#">Подробнее...</a>
             </div>
           </div>
         </div>
