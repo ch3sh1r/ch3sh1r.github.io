@@ -4,12 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="/css/carousel.css" rel="stylesheet">
+    {% if page.type == "index" %}<link href="/css/bootstrap-carousel.css" rel="stylesheet">{% endif %}
     <style type="text/css" id="holderjs-style">
         .holderjs-fluid {font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}
     </style>
@@ -18,9 +17,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png">
   </head>
   <body>
-    {% if page.type == "index" %}
-        {% include carousel %}
-    {% endif %}
     <div class="navbar-wrapper">
       <div class="container">
         <div class="navbar navbar-inverse">
@@ -38,6 +34,9 @@
         </div>
       </div>
     </div><!-- /.navbar -->
+    {% if page.type == "index" %}
+        {% include carousel %}
+    {% endif %}
     <div class="container">
       <div class="featurette">
         {{ content }}
@@ -63,7 +62,7 @@
     <script>
       !function ($) {
         $(function(){
-          $('#myCarousel').carousel()
+          $('#top-carousel').carousel()
         })
       }(window.jQuery)
     </script>

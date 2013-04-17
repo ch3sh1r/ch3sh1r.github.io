@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "1. Введение"
-tags: [translate, cryptography, jdege.us]
+title: "1 [jdege] Введение"
+tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/
 > crypto-python/index.html) за авторством Jeffrey Dege.
