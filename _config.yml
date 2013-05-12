@@ -1,4 +1,4 @@
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:title 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
@@ -7,12 +7,12 @@ title : ch3sh1r blogs.
 tagline: We are all mad here.
 author :
   name : Alexey Bednyakov
-  email : cheshir.box@gmal.com
+  email : ch3sh1r@ya.ru
   github : ch3ch1r
   twitter : ch3sh1r
   feedburner : http://feeds.feedburner.com/chesh1r
 
-production_url : http://ch3sh1r.github.com
+production_url : http://ch3sh1r.github.io
 
 JB :
   version : 0.2.0
