@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "4 [jdege] Класс Text"
+title: "Класс Text"
 tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/

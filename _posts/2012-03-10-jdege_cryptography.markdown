@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3 [jdege] Криптография"
+title: "Криптография"
 tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/
