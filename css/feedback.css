@@ -28,3 +28,36 @@
     color:#999
 }
 
+.tags {
+	list-style:none;
+	margin:0;
+	padding:5px 0 ;
+	overflow:hidden;
+}
+
+.tags li {
+	line-height:28px;
+}
+
+.tags.inline li {
+	float:left;
+}
+
+.tags a {
+	padding: 3px 6px;
+	margin: 2px;
+	background: #eee;
+	color:#005F6B;
+	border-radius: 3px;
+	text-decoration:none;
+}
+.tags a span{
+	vertical-align:super;
+	font-size:0.8em;
+}
+.tags a.active {
+	background:#57A957;
+	border:1px solid #4C964D;
+	color:#FFF;
+}
+
