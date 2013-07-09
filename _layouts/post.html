@@ -46,12 +46,24 @@ layout: default
     <h4>Опубликовано</h4>
     <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
     <hr />
-    {%unless page.tags == empty%}
     <h4>Теги</h4>
-    <ul class="tags">
-      {%assign tags_list = page.tags%}
-      {%include tags_list%}
-    </ul>
-  {%endunless%}  
+    {%unless page.tags == empty%}
+      <ul class="tags">
+        {%assign tags_list = page.tags%}
+        {%include tags_list%}
+      </ul>
+    {%endunless%}  
+    <hr />
+    <figure class="kudo kudoable" data-id="1">
+      <a class="kudobject">
+        <div class="opening">
+          <div class="circle">&nbsp;</div>
+        </div>
+      </a>
+      <a href="#kudo" class="count">
+        <span class="num">∴</span>
+        <span class="txt">kudos</span>
+      </a>
+    </figure>
   </div>
 </div>
