@@ -27,18 +27,6 @@
     </style>
   </head>
   <body>
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="{{HOME_PATH}}">@ch3sh1r blogs.</a>
-          <ul class="nav">
-            {%assign pages_list = site.pages%}
-            {%assign group = 'navigation'%}
-            {%include pages_list%}
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="featurette">
         {{content}}
