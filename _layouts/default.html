@@ -3,7 +3,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{page.title}}</title>
+    {% if page.type == 'index' %}
+    <title>@ch3sh1r blogs.</title>
+    {% else %}
+    <title>{{page.title}} — @ch3sh1r blogs.</title>
+    {% endif %}
     <meta name="author" content="{{site.author.name}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/img/favicon.ico" rel="shortcut icon">
@@ -26,7 +30,7 @@
     <div class="navbar navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{HOME_PATH}}">{{site.title}}</a>
+          <a class="brand" href="{{HOME_PATH}}">@ch3sh1r blogs.</a>
           <ul class="nav">
             {%assign pages_list = site.pages%}
             {%assign group = 'navigation'%}
