@@ -5,5 +5,24 @@ header: Архив
 group: navigation
 ---
 {% include setup %}
-{% assign posts_collate = site.posts %}
-{% include posts_collate %}
+<div class="row">
+  <div class="span8">
+    <h2>Записи</h2>
+    {% assign posts_collate = site.posts %}
+    {% include posts_collate %}
+  </div>
+  <div class="span4">
+    <h2>Теги</h2>
+    <ul class="tags inline">
+      {% assign tags_list = site.tags %}  
+      {% include tags_list %}
+    </ul>
+    {% for tag in site.tags %} 
+      <h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
+      <ul>
+        {% assign pages_list = tag[1] %}  
+        {% include pages_list %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>
