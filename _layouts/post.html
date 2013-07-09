@@ -43,17 +43,6 @@ layout: default
     <hr>
   </div>
   <div class="span2">
-    <h4>Опубликовано</h4>
-    <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
-    <hr />
-    <h4>Теги</h4>
-    {%unless page.tags == empty%}
-      <ul class="tags">
-        {%assign tags_list = page.tags%}
-        {%include tags_list%}
-      </ul>
-    {%endunless%}  
-    <hr />
     <figure class="kudo kudoable" data-id="1">
       <a class="kudobject">
         <div class="opening">
@@ -65,5 +54,16 @@ layout: default
         <span class="txt">kudos</span>
       </a>
     </figure>
+    <hr />
+    <h4>Опубликовано</h4>
+    <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
+    <hr />
+    <h4>Теги</h4>
+    {%unless page.tags == empty%}
+      <ul class="tags">
+        {%assign tags_list = page.tags%}
+        {%include tags_list%}
+      </ul>
+    {%endunless%}  
   </div>
 </div>
