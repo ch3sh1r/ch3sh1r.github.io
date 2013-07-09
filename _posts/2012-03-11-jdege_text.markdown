@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Класс Text"
+abstract: "Короткое описание статьи."
 tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/
