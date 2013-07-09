@@ -5,43 +5,10 @@ layout: default
 <div class="page-header">
   <h1>
     {{page.title}}
-    <small>{{site.tagline}}</small>
+    <small><a href="/">@ch3sh1r blogs.</a></small>
   </h1>
 </div>
 <div class="container">
-  <div class="span9">
-    {{content}}
-    <hr />
-    <center>
-      <div class="pagination">
-        <ul>
-          {% if page.previous %}
-            <li class="prev">
-              <a href="{{BASE_PATH}}{{page.previous.url}}" title="{{page.previous.title}}">&larr; Предыдущее</a>
-            </li>
-          {% else %} 
-            <li class="prev disabled">
-              <a>&larr; Предыдущее</a>
-            </li>
-          {% endif %}
-            <li>
-              <a href="{{BASE_PATH}}{{site.archive_path}}">Архив</a>
-            </li>
-          {% if page.next %}
-            <li class="next">
-              <a href="{{BASE_PATH}}{{page.next.url}}" title="{{page.next.title}}">Следующее &rarr;</a>
-            </li>
-          {% else %}
-            <li class="next disabled">
-              <a>Следующее &rarr;</a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </center>
-      {% include feedback %}
-    <hr>
-  </div>
   <div class="span2">
     <center>
     <figure class="kudo kudoable" data-id="1">
@@ -67,5 +34,38 @@ layout: default
       </ul>
     {%endunless%}  
     </center>
+  </div>
+  <div class="span9">
+    {{content}}
+    <hr />
+    <center>
+      <div class="pagination">
+        <ul>
+          {% if page.previous %}
+            <li class="prev">
+              <a href="{{BASE_PATH}}{{page.previous.url}}" title="{{page.previous.title}}">&larr; Назад</a>
+            </li>
+          {% else %} 
+            <li class="prev disabled">
+              <a>&larr; Назад</a>
+            </li>
+          {% endif %}
+            <li>
+              <a href="/archive.html">Архив</a>
+            </li>
+          {% if page.next %}
+            <li class="next">
+              <a href="{{BASE_PATH}}{{page.next.url}}" title="{{page.next.title}}">Вперед &rarr;</a>
+            </li>
+          {% else %}
+            <li class="next disabled">
+              <a>Вперед &rarr;</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </center>
+      {% include feedback %}
+    <hr>
   </div>
 </div>
