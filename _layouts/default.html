@@ -19,26 +19,18 @@
             margin:0
         }
     </style>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
   </head>
   <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <a class="brand" href="{{HOME_PATH}}">{{site.title}}</a>
-            <ul class="nav">
-              {%assign pages_list = site.pages%}
-              {%assign group = 'navigation'%}
-              {%include pages_list%}
-            </ul>
-            <p class="navbar-text pull-right"> 
-              <i class="icon-bookmark"></i>
-              <a href="http://feeds.feedburner.com/ch3sh1r" class="navbar-link"> RSS</a>
-            </p>
-          </div>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{HOME_PATH}}">{{site.title}}</a>
+          <ul class="nav">
+            {%assign pages_list = site.pages%}
+            {%assign group = 'navigation'%}
+            {%include pages_list%}
+          </ul>
         </div>
       </div>
     </div>
