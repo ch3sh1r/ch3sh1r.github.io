@@ -4,7 +4,20 @@ title: ch3sh1r blogs.
 type: index
 ---
 {% include setup %}
-<article>
-  <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
-  {{ site.posts.first.content }}
-</article>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      Some common info you alredy know. <br />
+      I'll surely write it down. <br />
+      <br />
+      Later. <br />
+    </div>
+    <div class="span10">
+      <article>
+        <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+        {{ site.posts.first.content }}
+      </article>
+      {% include feedback %}
+    </div>
+  </div>
+</div>
