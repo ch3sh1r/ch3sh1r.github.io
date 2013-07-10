@@ -1,7 +1,15 @@
-@ch3sh1r's blogs.
------------------
+# @ch3sh1r's blogs
 
-Hi! This is a [Jekyll](http://github.com/mojombo/jekyll)-based blog 
-powered with [Jekyll Bootstrap](http://jekyllbootstrap.com),
-hosted on [GitHub Pages](http://pages.github.com/). 
+This is a [Jekyll](http://github.com/mojombo/jekyll)-based blog 
+powered with:
+* [Bootstrap](http://twitter.github.io/bootstrap) by [@twitter](https://github.com/twitter),
+* [Jekyll Bootstrap](http://jekyllbootstrap.com) by [@mojombo](https://github.com/mojombo),
+* [Kudos](https://github.com/masukomi/kudos) by [@masukomi](https://github.com/masukomi).
 
+Hosted on [GitHub Pages](http://pages.github.com). 
+
+## License info
+
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">@ch3sh1r blogs</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ch3sh1r.github.com" property="cc:attributionName" rel="cc:attributionURL">Alexey Bednyakov</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+
+[![Creative Commons License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU)
