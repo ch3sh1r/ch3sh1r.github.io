@@ -9,6 +9,21 @@ tags: [cryptography, jdege.us]
 > Это значит, что все права на текст принадлежат автору, а в ошибках,
 > скорее всего, стоит винить переводчика.
 
+Содержание
+----------
+
+<ol>
+<li><a href='/jdege'>Введение</a></li>
+<li><a href='/jdege-python'>Python</a></li>
+<li><a href='/jdege-cryptography'>Криптография</a></li>
+<li><a href='/jdege-text'><b>Класс Text</b></a></li>
+<li>Класс Encryption</li>
+<li>Криптоанализ I - Ряд Цифр</li>
+<li>Криптоанализ II - Хитрость</li>
+<li>Криптоанализ III - Точность</li>
+<li>Создание программ</li>
+</ol>
+
 Программировать будем от конца к началу, то есть с целью сломать Monome-Dinome 
 мы сначала напишем программу для шифрования открытого текста. Затем 
 напишем программу для расшифрования по известному ключу. 
@@ -376,4 +391,3 @@ class Text:
     YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
     RAMS
     >> 
-

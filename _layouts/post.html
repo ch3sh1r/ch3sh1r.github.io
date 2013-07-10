@@ -11,28 +11,32 @@ layout: default
 <div class="container">
   <div class="span2">
     <center>
-    <figure class="kudo kudoable" data-id="1">
-      <a class="kudobject">
-        <div class="opening">
-          <div class="circle">&nbsp;</div>
-        </div>
+      <figure class="kudo kudoable" data-id="1">
+        <a class="kudobject">
+          <div class="opening">
+            <div class="circle">&nbsp;</div>
+          </div>
+        </a>
+        <a href="#kudo" class="count">
+          <span class="num">∴</span>
+          <span class="txt">kudos</span>
+        </a>
+      </figure>
+      <hr />
+      <h4>Опубликовано</h4>
+      <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
+      <hr />
+      <h4>Теги</h4>
+      {%unless page.tags == empty%}
+        <ul class="tags">
+          {%assign tags_list = page.tags%}
+          {%include tags_list%}
+        </ul>
+      {%endunless%}  
+      <hr />
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">
+        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" />
       </a>
-      <a href="#kudo" class="count">
-        <span class="num">∴</span>
-        <span class="txt">kudos</span>
-      </a>
-    </figure>
-    <hr />
-    <h4>Опубликовано</h4>
-    <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
-    <hr />
-    <h4>Теги</h4>
-    {%unless page.tags == empty%}
-      <ul class="tags">
-        {%assign tags_list = page.tags%}
-        {%include tags_list%}
-      </ul>
-    {%endunless%}  
     </center>
   </div>
   <div class="span9">
@@ -43,7 +47,7 @@ layout: default
         <ul>
           {% if page.previous %}
             <li class="prev">
-              <a href="{{BASE_PATH}}{{page.previous.url}}" title="{{page.previous.title}}">&larr; Назад</a>
+              <a href="/{{page.previous.url}}" title="{{page.previous.title}}">&larr; Назад</a>
             </li>
           {% else %} 
             <li class="prev disabled">
@@ -55,7 +59,7 @@ layout: default
             </li>
           {% if page.next %}
             <li class="next">
-              <a href="{{BASE_PATH}}{{page.next.url}}" title="{{page.next.title}}">Вперед &rarr;</a>
+              <a href="/{{page.next.url}}" title="{{page.next.title}}">Вперед &rarr;</a>
             </li>
           {% else %}
             <li class="next disabled">
