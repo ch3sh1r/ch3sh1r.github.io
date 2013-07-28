@@ -2,7 +2,6 @@
 layout: page
 type: index
 ---
-{% include setup %}
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
@@ -14,7 +13,7 @@ type: index
             </div>
           </a>
           <a href="#kudo" class="count">
-            <span class="num">∴</span>
+            <span class="num">∴ </span>
             <span class="txt">kudos</span>
           </a>
         </figure>
@@ -29,23 +28,24 @@ type: index
             <i class="icon-twitter"></i> Твиттер</a>
           <a href="https://twitter.com/ch3sh1r" class="btn">
             <i class="icon-github-alt"></i> Гитхаб</a>
-          <a href="/archive.html" class="btn">
-            <i class="icon-folder-close"></i> Архив</a>
           <a href="http://feeds.feedburner.com/ch3sh1r?format=xml" class="btn">
-          <i class="icon-rss-sign"></i> Фид</a>
+            <i class="icon-rss-sign"></i> Фид</a>
         </div>
         <hr />
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">
-          <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" />
+          <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
         </a>
       </center>
     </div>
-    <div class="span10">
-      <article>
-        <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
-        {{ site.posts.first.content }}
-      </article>
-      {% include feedback %}
+    <div class="span9">
+      <table class="table table-hover">
+      {% for post in site.posts %}
+        <tr>
+          <td><a href="/{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}</td>
+          <td><i>{{ post.date | date_to_long_string }}</i></td>
+        </tr>
+      {% endfor %}
+      </table>
     </div>
   </div>
 </div>
