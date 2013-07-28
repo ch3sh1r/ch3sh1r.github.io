@@ -2,23 +2,6 @@ require 'rubygems'
 require 'rake'
 require 'fileutils'
 
-desc "Draft a new post"
-task :draft do
-  puts "What should we call this post for now?"
-  name = STDIN.gets.chomp
-  FileUtils.touch("_drafts/#{name}.markdown")
-
-  open("_drafts/#{name}.markdown", 'a') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"DRAFT: #{name}\""
-    post.puts "category: "
-    post.puts "tags: []"
-    post.puts "---"
-    post.puts ""
-  end
-end
-
 desc "Begin a new post"
 task :post do
   puts "What should we call this post for now?"
