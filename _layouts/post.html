@@ -24,13 +24,15 @@ layout: default
       </figure>
       <hr />
       <h4>Опубликовано</h4>
-      <div class="date"><span>{{page.date | date_to_long_string}}</span></div>
+        <div class="date">
+          <span>{{ page.date | date_to_long_string }}</span>
+        </div>
       <hr />
       <h4>Теги</h4>
-      {%unless page.tags == empty%}
+      {% unless page.tags == empty %}
         <ul class="tags">
-          {%assign tags_list = page.tags%}
-          {%include tags_list%}
+          {% assign tags_list = page.tags %}
+          {% include tags_list %}
         </ul>
       {%endunless%}  
       <hr />
@@ -42,34 +44,6 @@ layout: default
   <div class="span9">
     {{content}}
     <hr />
-    <center>
-      <div class="pagination">
-        <ul>
-          {% if page.previous %}
-            <li class="prev">
-              <a href="{{BASE_PATH}}{{page.previous.url}}" title="{{page.previous.title}}">&larr; Назад</a>
-            </li>
-          {% else %} 
-            <li class="prev disabled">
-              <a>&larr; Назад</a>
-            </li>
-          {% endif %}
-            <li>
-              <a href="/archive.html">Архив</a>
-            </li>
-          {% if page.next %}
-            <li class="next">
-              <a href="{{BASE_PATH}}{{page.next.url}}" title="{{page.next.title}}">Вперед &rarr;</a>
-            </li>
-          {% else %}
-            <li class="next disabled">
-              <a>Вперед &rarr;</a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </center>
       {% include feedback %}
-    <hr>
   </div>
 </div>
