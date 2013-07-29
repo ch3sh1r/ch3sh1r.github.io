@@ -807,7 +807,18 @@ h4 small {
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #eeeeee;
+  margin-left: 20px;
+  margin-right: 20px;
 }
+  .page-header a {
+    font-family:Silkscreen;
+    float:right;
+    font-size:30px;
+    color:#310062;
+  }
+  .page-header a:hover {
+    text-decoration:none;
+  }
 
 ul,
 ol {

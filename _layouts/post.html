@@ -2,57 +2,58 @@
 layout: default
 ---
 <div class="page-header">
-  <h1>
-    {{page.title}}
-    <a href="/" class="blog-link">@ch3sh1r blogs.</a>
-  </h1>
+  <h1>{{page.title}}
+  <a href="/" class="blog-link">@ch3sh1r blogs.</a></h1>
 </div>
-<div class="container">
-  <div class="span2">
-    <center>
-      <figure class="kudo kudoable" data-id="1">
-        <a class="kudobject">
-          <div class="opening">
-            <div class="circle">&nbsp;</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <center>
+        <figure class="kudo kudoable" data-id="1">
+          <a class="kudobject">
+            <div class="opening">
+              <div class="circle">&nbsp;</div>
+            </div>
+          </a>
+          <a href="#kudo" class="count">
+            <span class="num">∴ </span>
+            <span class="txt">kudos</span>
+          </a>
+        </figure>
+        <hr />
+        <h4>Теги</h4>
+        {% unless page.tags == empty %}
+          <ul class="tags">
+            {% assign tags_list = page.tags %}
+            {% include tags_list %}
+          </ul>
+        {%endunless%}  
+        <hr />
+          <div class="social">
+            <a href="https://twitter.com/ch3sh1r"><span class='symbol'>&#xe286;</span></a>
+            <a href="https://github.com/ch3sh1r"><span class='symbol'>&#xe237;</span></a>
+            <a href="http://feeds.feedburner.com/ch3sh1r?format=xml"><span class='symbol'>&#xe271;</span></a>
           </div>
+        <hr />
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">
+          <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
         </a>
-        <a href="#kudo" class="count">
-          <span class="num">∴ </span>
-          <span class="txt">kudos</span>
-        </a>
-      </figure>
+      </center>
+    </div>
+    <div class="span9">
+      {{content}}
       <hr />
-      <h4>Опубликовано</h4>
-        <div class="date">
-          <span>{{ page.date | date_to_long_string }}</span>
+        <div class="blog-feedback">
+            <h2 class="blog-feedback-header">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Хочется поговорить — пишите в твиттер: <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">@ch3sh1r</a>
+          </h2>
+          <p class="blog-feedback-description">
+            Я с большой вероятнотсью увижу все написанное в Твиттере.
+            Для надежности и для более развернутого диалога есть почта 
+            <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
+          </p>
         </div>
-      <hr />
-      <h4>Теги</h4>
-      {% unless page.tags == empty %}
-        <ul class="tags">
-          {% assign tags_list = page.tags %}
-          {% include tags_list %}
-        </ul>
-      {%endunless%}  
-      <hr />
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">
-        <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
-      </a>
-    </center>
-  </div>
-  <div class="span9">
-    {{content}}
-    <hr />
-      <div class="blog-feedback">
-          <h2 class="blog-feedback-header">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Хочется поговорить — пишите в твиттер: <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">@ch3sh1r</a>
-        </h2>
-        <p class="blog-feedback-description">
-          Я с большой вероятнотсью увижу все написанное в Твиттере.
-          Для надежности и для более развернутого диалога есть почта 
-          <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
-        </p>
-      </div>
+    </div>
   </div>
 </div>

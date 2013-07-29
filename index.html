@@ -38,23 +38,22 @@ type: index
       <br />
       <br />
       <center>
-      <div class="blog-header">
-        <a href="/">@ch3sh1r blogs.</a>
-        T2gsIHlvdSBjYW4ndCBoZWxwIHRoYXQuIFdlJ3JlIGFsbCBtYWQgaGVyZS4gSSdtIG1hZC4gWW91J3JlIG1hZC4=
-      </div>
+        <div class="blog-header">
+          <a href="/">@ch3sh1r blogs.</a>
+          T2gsIHlvdSBjYW4ndCBoZWxwIHRoYXQuIFdlJ3JlIGFsbCBtYWQgaGVyZS4gSSdtIG1hZC4gWW91J3JlIG1hZC4=
+        </div>
       </center>
       <br />
       <br />
-      <br />
-      <br />
-      <table class="table table-hover">
+      <ul class="listing">
       {% for post in site.posts %}
         <tr>
-          <td><a href="/{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}</td>
-          <td><i>{{ post.date | date_to_long_string }}</i></td>
+          <li>
+          <span>{{ post.date | date_to_long_string }}</span>
+          <a href="/{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}
+          </li>
         </tr>
       {% endfor %}
-      </table>
     </div>
   </div>
 </div>
