@@ -804,6 +804,7 @@ h4 small {
 }
 
 .page-header {
+  font-size:35px;
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #eeeeee;

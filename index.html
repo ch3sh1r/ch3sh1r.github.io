@@ -4,6 +4,25 @@ type: index
 ---
 <div class="container-fluid">
   <div class="row-fluid">
+    <div class="span9">
+      <br />
+      <center>
+        <div class="blog-header">
+          <h1><a href="/">@ch3sh1r blogs.</a></h1>
+          T2gsI HlvdS BjYW4 ndCBo ZWxwI HRoYX QuIFd lJ3Jl IGFsb CBtYW QgaGV yZS4g SSdtI G1hZC 4gWW9 1J3Jl IG1hZ C4=
+        </div>
+      </center>
+      <br />
+      <ul class="listing">
+      {% for post in site.posts %}
+        <tr>
+          <li>
+          <span>{{ post.date | date_to_long_string }}</span>
+          <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}
+          </li>
+        </tr>
+      {% endfor %}
+    </div>
     <div class="span2">
       <center>
         <figure class="kudo kudoable" data-id="1">
@@ -18,10 +37,12 @@ type: index
           </a>
         </figure>
         <hr />
-        Some common info you already know. <br />
-        I'll surely write it. <br />
-        <br />
-        Later. <br />
+        <div class="tags">
+          Some common info you already know. <br />
+          I'll surely write it. <br />
+          <br />
+          Later. <br />
+        </div>
         <hr />
           <div class="social">
             <a href="https://twitter.com/ch3sh1r"><span class='symbol'>&#xe286;</span></a>
@@ -33,27 +54,6 @@ type: index
           <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
         </a>
       </center>
-    </div>
-    <div class="span9">
-      <br />
-      <br />
-      <center>
-        <div class="blog-header">
-          <a href="/">@ch3sh1r blogs.</a>
-          T2gsIHlvdSBjYW4ndCBoZWxwIHRoYXQuIFdlJ3JlIGFsbCBtYWQgaGVyZS4gSSdtIG1hZC4gWW91J3JlIG1hZC4=
-        </div>
-      </center>
-      <br />
-      <br />
-      <ul class="listing">
-      {% for post in site.posts %}
-        <tr>
-          <li>
-          <span>{{ post.date | date_to_long_string }}</span>
-          <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}
-          </li>
-        </tr>
-      {% endfor %}
     </div>
   </div>
 </div>

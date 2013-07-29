@@ -2,11 +2,26 @@
 layout: default
 ---
 <div class="page-header">
-  <h1>{{page.title}}
-  <a href="/" class="blog-link">@ch3sh1r blogs.</a></h1>
+  {{page.title}}
+  <a href="/" class="blog-link">@ch3sh1r blogs.</a>
 </div>
 <div class="container-fluid">
   <div class="row-fluid">
+    <div class="span10">
+      {{content}}
+      <hr />
+        <div class="blog-feedback">
+            <h2 class="blog-feedback-header">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Хочется поговорить — пишите в твиттер: <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">@ch3sh1r</a>
+          </h2>
+          <p class="blog-feedback-description">
+            Я с большой вероятнотсью увижу все написанное в Твиттере.
+            Для надежности и для более развернутого диалога есть почта 
+            <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
+          </p>
+        </div>
+    </div>
     <div class="span2">
       <center>
         <figure class="kudo kudoable" data-id="1">
@@ -21,7 +36,7 @@ layout: default
           </a>
         </figure>
         <hr />
-        <h4>Теги</h4>
+        <h4 class="tags">tags</h4>
         {% unless page.tags == empty %}
           <ul class="tags">
             {% assign tags_list = page.tags %}
@@ -39,21 +54,6 @@ layout: default
           <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
         </a>
       </center>
-    </div>
-    <div class="span9">
-      {{content}}
-      <hr />
-        <div class="blog-feedback">
-            <h2 class="blog-feedback-header">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Хочется поговорить — пишите в твиттер: <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">@ch3sh1r</a>
-          </h2>
-          <p class="blog-feedback-description">
-            Я с большой вероятнотсью увижу все написанное в Твиттере.
-            Для надежности и для более развернутого диалога есть почта 
-            <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
-          </p>
-        </div>
     </div>
   </div>
 </div>
