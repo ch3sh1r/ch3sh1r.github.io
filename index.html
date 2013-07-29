@@ -50,7 +50,7 @@ type: index
         <tr>
           <li>
           <span>{{ post.date | date_to_long_string }}</span>
-          <a href="/{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}
+          <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.abstract }}
           </li>
         </tr>
       {% endfor %}
