@@ -2,12 +2,20 @@
 layout: default
 ---
 <div class="page-header">
-  {{page.title}}
-  <a href="/" class="blog-link">@ch3sh1r blogs.</a>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span6">
+        {{page.title}}
+      </div>
+      <div class="span6">
+        <a href="/" class="blog-link">@ch3sh1r blogs.</a>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span10">
+    <div class="span9">
       {{content}}
       <hr />
         <div class="blog-feedback">
@@ -22,7 +30,7 @@ layout: default
           </p>
         </div>
     </div>
-    <div class="span2">
+    <div class="span3">
       <center>
         <figure class="kudo kudoable" data-id="1">
           <a class="kudobject">
@@ -53,6 +61,7 @@ layout: default
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru_RU">
           <img alt="Creative Commons License" style="border-width:0" src="/img/cc-by-sa.png" />
         </a>
+        <hr />
       </center>
     </div>
   </div>
