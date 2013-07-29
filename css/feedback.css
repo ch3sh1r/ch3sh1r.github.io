@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('/font/slkscr.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .blog-feedback{
     margin:50px 0;
     background-color:#f1f1f1;
@@ -12,7 +19,7 @@
 }
 
 .blog-feedback-header{
-    background:url("http://ch3sh1r.github.io/img/twitter.png") 10px 3px no-repeat;
+    background:url("/img/twitter.png") 10px 3px no-repeat;
     background-size:38px auto;
     margin:0;
     padding:3px;
@@ -47,7 +54,6 @@
 	padding: 3px 6px;
 	margin: 2px;
 	background: #eee;
-	color:#005F6B;
 	border-radius: 3px;
 	text-decoration:none;
 }
@@ -61,3 +67,38 @@
 	color:#FFF;
 }
 
+.social{
+    font-size:50px;
+}
+.social a {
+    color:#1f003f;
+    text-decoration:none;
+}
+.social a:hover {
+    color:#130027;
+    text-decoration:none;
+}
+
+.blog-link {
+    font-family:Silkscreen;
+    float:right;
+    font-size:30px;
+    color:#310062;
+}
+.blog-link a:hover {
+    text-decoration:none;
+}
+
+.blog-header {
+    font-family:Silkscreen;
+    color:#310062;
+    font-size:12px;
+}
+.blog-header a {
+    color:#310062;
+    font-size:75px;
+}
+.blog-header a:hover {
+    color:#1f003f;
+    text-decoration:none;
+}

@@ -7,10 +7,10 @@ div.opening{
 	height:50px;
 	border-radius:50%;
 	margin:0 auto;
-	border:5px solid #000;
+	border:5px solid #310062;
 	position:relative}
 div.opening div.circle{
-	background-color:#000;
+	background-color:#310062;
 	width:50px;
 	height:50px;
 	margin-left:-25px;
@@ -59,7 +59,7 @@ figure.kudo{
 	background-image: url(/img/smile.png);
 	background-position: center; 
 	background-repeat: no-repeat;
-	background-color: #000;
+	background-color: #310062;
 	background-size:80%;
 	-moz-background-size:80%;
 }
@@ -69,16 +69,16 @@ a.count {
 a.count span {
 	width:auto;
 	text-transform:uppercase;
-	font-family:"freight-sans-pro",sans-serif;
+	font-family:"Silkscreen",sans-serif;
 	margin-top:5px;
-	color:#000;
+	color:#310062;
 	font-weight:800;
 	display:block;
 	line-height: 13px;
 	margin-top:5px;
 }
 a.count span.num {
-	font-size: 18px;
+	font-size: 23px;
 }
 a.count span.txt {
 	font-size: 11px;
@@ -124,13 +124,13 @@ a.kudobject :hover { text-decoration: none ! important; }
 @keyframes bounce { 
   0% {
     transform: scale(1.1);
-    background-color: #000;
+    background-color: #310062;
     opacity: 1;
   }
   50% {
     transform: scale(1.6);
     opacity: .7;
-    background-color: #000;
+    background-color: #310062;
   }
   60% {
     transform: scale(0.6);
@@ -142,13 +142,13 @@ a.kudobject :hover { text-decoration: none ! important; }
 @-webkit-keyframes bounce { 
   0% {
     -webkit-transform: scale(1.1);
-    background-color: #000;
+    background-color: #310062;
     opacity: 1;
   }
   50% {
     -webkit-transform: scale(1.6);
     opacity: .7;
-    background-color: #000;
+    background-color: #310062;
   }
   60% {
     -webkit-transform: scale(0.6);
@@ -160,13 +160,13 @@ a.kudobject :hover { text-decoration: none ! important; }
 @-moz-keyframes bounce { 
   0% {
     -moz-transform: scale(1.1);
-    background-color: #000;
+    background-color: #310062;
     opacity: 1;
   }
   50% {
     -moz-transform: scale(1.6);
     opacity: .7;
-    background-color: #000;
+    background-color: #310062;
   }
   60% {
     -moz-transform: scale(0.6);

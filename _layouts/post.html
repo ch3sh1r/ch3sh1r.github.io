@@ -4,7 +4,7 @@ layout: default
 <div class="page-header">
   <h1>
     {{page.title}}
-    <small><a href="/">@ch3sh1r blogs.</a></small>
+    <a href="/" class="blog-link">@ch3sh1r blogs.</a>
   </h1>
 </div>
 <div class="container">
@@ -43,6 +43,16 @@ layout: default
   <div class="span9">
     {{content}}
     <hr />
-      {% include feedback %}
+      <div class="blog-feedback">
+          <h2 class="blog-feedback-header">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Хочется поговорить — пишите в твиттер: <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">@ch3sh1r</a>
+        </h2>
+        <p class="blog-feedback-description">
+          Я с большой вероятнотсью увижу все написанное в Твиттере.
+          Для надежности и для более развернутого диалога есть почта 
+          <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
+        </p>
+      </div>
   </div>
 </div>
