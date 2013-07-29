@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Криптография"
-abstract: "Короткое описание статьи."
+abstract: "Краткий брифинг и разбор шифра Monome-Dinome."
 tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/

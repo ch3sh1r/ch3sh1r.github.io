@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python"
-abstract: "Короткое описание статьи."
+abstract: "Мотивация использования Python в криптографии."
 tags: [cryptography, jdege.us]
 ---
 > Вы видите перед собой вольный перевод [курса](http://jdege.us/
