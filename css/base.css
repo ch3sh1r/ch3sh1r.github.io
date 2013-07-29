@@ -11,7 +11,7 @@
   font-size:12px;
 }
   .blog-header h1 {
-    font-size:75px;
+    font-size:42px;
   }
   .blog-header a {
     color:#310062;
@@ -86,7 +86,8 @@
   .tags a {
     padding: 3px 6px;
     margin: 2px;
-    background: #cdcdcd;
+    color: #fff;
+    background: #1f003f;
     border-radius: 3px;
     text-decoration:none;
   }
@@ -98,6 +99,11 @@
     background:#57A957;
     border:1px solid #4C964D;
     color:#FFF;
+  }
+  .tags a:hover {
+    color: #fff;
+    background: #130027;
+    text-decoration: none;
   }
 
 .social{
