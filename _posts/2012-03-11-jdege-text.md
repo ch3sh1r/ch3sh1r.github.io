@@ -12,10 +12,10 @@ tags: [cryptography, jdege.us]
 ### Содержание
 
 <ol>
-<li><a href='/jdege'>Введение</a></li>
-<li><a href='/jdege-python'>Python</a></li>
-<li><a href='/jdege-cryptography'>Криптография</a></li>
-<li><a href='/jdege-text'><b>Класс Text</b></a></li>
+<li><a href='/posts/jdege'>Введение</a></li>
+<li><a href='/posts/jdege-python'>Python</a></li>
+<li><a href='/posts/jdege-cryptography'>Криптография</a></li>
+<li><a href='/posts/jdege-text'><b>Класс Text</b></a></li>
 <li>Класс Encryption</li>
 <li>Криптоанализ I - Ряд Цифр</li>
 <li>Криптоанализ II - Хитрость</li>
