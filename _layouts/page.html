@@ -3,8 +3,16 @@ layout: default
 ---
 {% if page.type != 'index' %}
 <div class="page-header">
-    {{page.title}}
-    <a href="/" class="blog-link">@ch3sh1r blogs.</a>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span6">
+        {{page.title}}
+      </div>
+      <div class="span6">
+        <b><a href="/" class="blog-link">@ch3sh1r blogs.</a></b>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="row">
   <div class="span14">
