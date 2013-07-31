@@ -1,6 +1,22 @@
 @font-face {
   font-family: 'Silkscreen';
-  src: url('/font/slkscr.ttf');
+  src: url('/font/Silkscreen.eot');
+  src: url('/font/Silkscreen.eot?#iefix') format('embedded-opentype'),
+       url('/font/Silkscreen.woff') format('woff'),
+       url('/font/Silkscreen.ttf') format('truetype'),
+       url('/font/Silkscreen.svg#Silkscreen') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoSocialIcons';
+  src: url('/font/MonoSocialIcons.eot');
+  src: url('/font/MonoSocialIcons.eot?#iefix') format('embedded-opentype'),
+       url('/font/MonoSocialIcons.woff') format('woff'),
+       url('/font/MonoSocialIcons.ttf') format('truetype'),
+       url('/font/MonoSocialIcons.svg#MonoSocialIcons') format('svg');
+  src: url('/font/MonoSocialIcons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -8,7 +24,7 @@
 .blog-header {
   font-family:Silkscreen;
   color:#310062;
-  font-size:12px;
+  font-size:13px;
 }
   .blog-header h1 {
     font-size:42px;
@@ -117,3 +133,29 @@
     color:#130027;
     text-decoration:none;
   }
+
+.symbol, a.symbol:before {
+    font-family: 'MonoSocialIcons';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+  a.symbol:before {
+      content: attr(title);
+      margin-right: 0.3em;
+      font-size: 130%;
+  }
+  a.symbol {
+      background: #9f9f9f;
+      padding: 7px 5px 3px 5px;
+      color: white;
+      text-decoration: none;
+  }
+
