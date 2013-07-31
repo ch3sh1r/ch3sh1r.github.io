@@ -2,9 +2,17 @@
 
 This is a [Jekyll](http://github.com/mojombo/jekyll)-based blog 
 powered with:
-* [Bootstrap](http://twitter.github.io/bootstrap) by [@twitter](https://github.com/twitter),
-* [Jekyll Bootstrap](http://jekyllbootstrap.com) by [@mojombo](https://github.com/mojombo),
-* [Kudos](https://github.com/masukomi/kudos) by [@masukomi](https://github.com/masukomi).
+
+* [Bootstrap](http://twitter.github.io/bootstrap) 
+  by [@twitter](https://github.com/twitter),
+* [Jekyll Bootstrap](http://jekyllbootstrap.com) 
+  by [@mojombo](https://github.com/mojombo),
+* [Kudos](https://github.com/masukomi/kudos) 
+  by [@masukomi](https://github.com/masukomi),
+* [Mono Social Icons Font](http://drinchev.github.io/monosocialiconsfont) 
+  by [@drinchev](https://github.com/drinchev).
+* [Silkscreen Font](http://kottke.org/plus/type/silkscreen/) 
+  by Jason Kottke.
 
 Hosted on [GitHub Pages](http://pages.github.com). 
 
