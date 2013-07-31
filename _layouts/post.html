@@ -48,7 +48,16 @@ layout: default
         {% unless page.tags == empty %}
           <ul class="tags">
             {% assign tags_list = page.tags %}
-            {% include tags_list %}
+            {% if tags_list.first[0] == null %}
+              {% for tag in tags_list %} 
+                <li><a href="/tags.html#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+              {% endfor %}
+            {% else %}
+              {% for tag in tags_list %} 
+                <li><a href="/tags.html#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+              {% endfor %}
+            {% endif %}
+            {% assign tags_list = nil %}
           </ul>
         {%endunless%}  
         <hr />
