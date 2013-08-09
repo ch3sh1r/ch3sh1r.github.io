@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% if page.type == 'index' %}
+    {% if page.type == "index" %}
     <title>@ch3sh1r blogs.</title>
     {% else %}
     <title>{{page.title}} — @ch3sh1r blogs.</title>
@@ -29,12 +29,17 @@
     <script src="/js/parse.min.js"></script>
     <script src="/js/parse-kudos.js"></script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
-      });
-    </script>
-    <script type="text/javascript" src="/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    {% assign tags_list = page.tags %}
+    {% for tag in tags_list %} 
+      {% if tag == "math" %}
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+          });
+        </script>
+        <script type="text/javascript" src="/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+      {% endif %}
+    {% endfor %}
 
     <script type="text/javascript">
     (function (d, w, c) {
