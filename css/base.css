@@ -96,9 +96,6 @@
   .tags li {
     line-height:28px;
   }
-  .tags.inline li {
-    float:left;
-  }
   .tags a {
     padding: 3px 6px;
     margin: 2px;
@@ -121,6 +118,20 @@
     background: #130027;
     text-decoration: none;
   }
+
+.tags-header {
+  font-family:Silkscreen;
+  list-style:none;
+  margin:0;
+  padding:5px 0 ;
+  overflow:hidden;
+  padding: 3px 6px;
+  margin: 2px;
+  color: #fff;
+  background: #1f003f;
+  border-radius: 3px;
+  text-decoration:none;
+}
 
 .social{
   font-size:50px;
@@ -158,4 +169,3 @@
       color: white;
       text-decoration: none;
   }
-
