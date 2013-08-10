@@ -120,18 +120,11 @@
   }
 
 .tags-header {
-  font-family:Silkscreen;
-  list-style:none;
-  margin:0;
-  padding:5px 0 ;
-  overflow:hidden;
-  padding: 3px 6px;
-  margin: 2px;
-  color: #fff;
-  background: #1f003f;
-  border-radius: 3px;
-  text-decoration:none;
+  text-align: center;
 }
+  .tags-header h3 {
+    font-family: Silkscreen;
+  }
 
 .social{
   font-size:50px;

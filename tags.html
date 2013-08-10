@@ -1,56 +1,56 @@
 ---
 layout: page
 title: Теги
-group: navigation
 ---
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span4"></div>
-    <div class="span8">
-      <ul class="tags inline">
-        {% if site.tags.first[0] == null %}
-          {% for tag in site.tags %} 
-            <li><a href="/tags.html#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
-          {% endfor %}
-        {% else %}
-          {% for tag in site.tags %} 
-            <li><a href="/tags.html#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
-          {% endfor %}
-        {% endif %}
-      </ul>
-    </div>
-    <div class="span4"></div>
-  </div>
-</div>
-
-{% assign i = 0 %}
-{% assign j = 4 %}
-<div class="container-fluid">
-  {% for tag in site.tags %} 
-    {% assign i = i | plus:1 %}
-    {% if i == j %}
-  <div class="row-fluid">
-    {% endif %}
-    <div class="span4"> 
-      <h3 id="{{ tag[0] }}-ref" class="tags-header">{{ tag[0] }}</h3>
-        <ul>
-          {% for node in tag[1] %}
-            {% if group == null or group == node.group %}
-              {% if page.url == node.url %}
-          <li class="active"><a href="/{{node.url}}" class="active">{{node.title}}</a></li>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2"></div>
+        <div class="span8">
+          <center>
+            <ul class="tags inline">
+              {% if site.tags.first[0] == null %}
+                {% for tag in site.tags %} 
+              <li><a href="/tags.html#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+                {% endfor %}
               {% else %}
-          <li><a href="/{{node.url}}">{{node.title}}</a></li>
+                {% for tag in site.tags %} 
+              <li><a href="/tags.html#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+                {% endfor %}
               {% endif %}
-            {% endif %}
-          {% endfor %}
-          {% assign group = nil %}
-        </ul>
+            </ul>
+          </center>
+        </div>
+        <div class="span2"></div>
+      </div>
     </div>
-    {% if i == j %}
-  </div>
-      {% assign j = j | plus:3 %}
-    {% endif %}
-  {% endfor %}
-</div>
-{% assign i = nil %}
-{% assign j = nil %}
+    {% assign i = 0 %}
+    {% assign j = 4 %}
+    <div class="container-fluid">
+      {% for tag in site.tags %} 
+        {% assign i = i | plus:1 %}
+        {% if i == j %}
+      <div class="row-fluid">
+        {% endif %}
+        <div class="span4 tags-header"> 
+          <h3 id="{{ tag[0] }}-ref" class="">{{ tag[0] }}</h3>
+            <ul>
+              {% for node in tag[1] %}
+                {% if group == null or group == node.group %}
+                  {% if page.url == node.url %}
+              <li class="active"><a href="/{{node.url}}" class="active">{{node.title}}</a></li>
+                  {% else %}
+              <li><a href="/{{node.url}}">{{node.title}}</a></li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% assign group = nil %}
+            </ul>
+        </div>
+        {% if i == j %}
+      </div>
+          {% assign j = j | plus:3 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% assign i = nil %}
+    {% assign j = nil %}
