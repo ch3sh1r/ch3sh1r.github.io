@@ -23,34 +23,34 @@ group: navigation
   </div>
 </div>
 
+{% assign i = 0 %}
+{% assign j = 4 %}
 <div class="container-fluid">
-  {% assign i = 0 %}
-  {% assign j = 1 %}
   {% for tag in site.tags %} 
     {% assign i = i | plus:1 %}
-    {% if i | divided_by:3 != j %}
-      <div class="row-fluid">
-    {% else %}
-    {% assign j = j | plus:1 %}
+    {% if i == j %}
+  <div class="row-fluid">
     {% endif %}
     <div class="span4"> 
-      {{ i }} {{ j }}
       <h3 id="{{ tag[0] }}-ref" class="tags-header">{{ tag[0] }}</h3>
         <ul>
           {% for node in tag[1] %}
             {% if group == null or group == node.group %}
               {% if page.url == node.url %}
-              <li class="active"><a href="/{{node.url}}" class="active">{{node.title}}</a></li>
+          <li class="active"><a href="/{{node.url}}" class="active">{{node.title}}</a></li>
               {% else %}
-              <li><a href="/{{node.url}}">{{node.title}}</a></li>
+          <li><a href="/{{node.url}}">{{node.title}}</a></li>
               {% endif %}
             {% endif %}
           {% endfor %}
           {% assign group = nil %}
         </ul>
-      </div>
     </div>
+    {% if i == j %}
+  </div>
+      {% assign j = j | plus:3 %}
+    {% endif %}
   {% endfor %}
-  {% assign i = nil %}
-  {% assign j = nil %}
 </div>
+{% assign i = nil %}
+{% assign j = nil %}
