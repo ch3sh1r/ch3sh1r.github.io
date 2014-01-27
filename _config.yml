@@ -1,4 +1,4 @@
 permalink: posts/:title 
-exclude: ["README.md", "Rakefile"]
+exclude: ["readme.md", "rakefile"]
 auto: true
 pygments: true
