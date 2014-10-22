@@ -2,36 +2,25 @@
 layout: default
 ---
 <div class="page-header">
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span6">
-        {{page.title}}
-      </div>
-      <div class="span6">
-        <center>
-          <b><a href="/" class="blog-link">@ch3sh1r blogs.</a></b>
-        </center>
+  <div class="container">
+    <div class="row">
+      <div class="blog-header">
+        <div class="col-md-6">
+          <h2>{{page.title}}</h2>
+        </div>
+        <div class="col-md-6">
+          <h3><a href="/">@ch3sh1r blogs.</a></h3>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span9">
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
       {{content}}
-      <hr />
-        <div class="blog-feedback">
-            <h2 class="blog-feedback-header">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Хочется поговорить — <a href="https://twitter.com/intent/tweet?text=@ch3sh1r%20&amp;related=ch3sh1r&amp;url=http://ch3sh1r.gihub.io{{page.url}}" target="blank">пишите</a>.
-          </h2>
-          <p class="blog-feedback-description">
-            А еще у меня есть почта, да. Вот такая: 
-            <a href="mailto:ch3sh1r@ya.ru">ch3sh1r@ya.ru</a>.
-          </p>
-        </div>
     </div>
-    <div class="span3">
+    <div class="col-md-3">
       <center>
         <figure class="kudo kudoable" data-id="1">
           <a class="kudobject">

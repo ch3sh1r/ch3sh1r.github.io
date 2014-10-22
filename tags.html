@@ -2,10 +2,10 @@
 layout: page
 title: Теги
 ---
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2"></div>
-        <div class="span8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <center>
             <ul class="tags inline">
               {% if site.tags.first[0] == null %}
@@ -20,18 +20,18 @@ title: Теги
             </ul>
           </center>
         </div>
-        <div class="span2"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
     {% assign i = 0 %}
     {% assign j = 4 %}
-    <div class="container-fluid">
+    <div class="container">
       {% for tag in site.tags %} 
         {% assign i = i | plus:1 %}
         {% if i == j %}
-      <div class="row-fluid">
+      <div class="row">
         {% endif %}
-        <div class="span4 tags-header"> 
+        <div class="col-md-4 tags-header"> 
           <h3 id="{{ tag[0] }}-ref" class="">{{ tag[0] }}</h3>
             <ul>
               {% for node in tag[1] %}
