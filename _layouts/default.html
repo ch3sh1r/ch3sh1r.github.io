@@ -13,21 +13,21 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-Compatible" content="ie=edge" />
 
-    <link rel="icon" href="/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/ch3sh1r" />
 
-    <link href="/css/base.css" rel="stylesheet">
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/css/base.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
   <body>
     {{content}}
-    <script src="/js/jquery.js"></script>
-    <script src="/js/jstorage.js"></script>
-    <script src="/js/kudos.js"></script>
-    <script src="/js/parse.min.js"></script>
-    <script src="/js/parse-kudos.js"></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jstorage.js"></script>
+    <script src="/static/js/kudos.js"></script>
+    <script src="/static/js/parse.min.js"></script>
+    <script src="/static/js/parse-kudos.js"></script>
 
     {% assign tags_list = page.tags %}
     {% for tag in tags_list %} 
@@ -37,7 +37,7 @@
             tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
           });
         </script>
-        <script type="text/javascript" src="/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+        <script type="text/javascript" src="/static/js/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
       {% endif %}
     {% endfor %}
 
