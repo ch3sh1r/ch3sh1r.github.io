@@ -1,18 +1,15 @@
 ---
 layout: page
-title: 404
+title: Sorry, this page doesn't exist :(
 ---
 <center>
-  <br>
-  Sorry, this page does not exist. <br>
   But here is cat.<br>
   <script type="text/javascript">
-    var img = new Array(2);
-    img[0]='404purr.gif';
-    img[1]='404shhh.gif';
-    img[2]='404walk.gif';
-    var imgStr = '<img src="/static/img/' + img[Math.floor( Math.random() * img.length )] + '" alt = "">';
-    document.write(imgStr); 
+    var cats = new Array("purr", "shhh", "walk");
+    document.write(
+            '<img src="/static/img/404' + 
+            cats[Math.floor(Math.random() * cats.length)] + 
+            '.gif">'); 
     document.close();
   </script> 
 </center>
