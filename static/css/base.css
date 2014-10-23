@@ -129,11 +129,27 @@
     text-decoration:none;
   }
 
-.tags-header {
-  text-align:center;
+.tags-block {
+  color:#fff;
+  background:#1f003f;
+  border-radius:3px;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-right:5px;
+  margin-left:5px;
 }
-  .tags-header h3 {
+  .tags-block h3 {
     font-family:Silkscreen;
+    text-align:center;
+  }
+  .tags-block a {
+    color:#fff;
+    text-decoration:none;
+  }
+  .tags-block a:hover {
+    background:#130027;
+    border-radius:3px;
+    text-decoration:none;
   }
 
 .social{
@@ -221,7 +237,6 @@ figure{
 	margin-top:20px;
 }
   figure.kudo{
-    #position:absolute;
     margin-bottom:5px;
     top:3px;
     text-align:center;

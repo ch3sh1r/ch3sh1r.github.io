@@ -4,8 +4,7 @@ title: Теги
 ---
     <div class="container">
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3">
           <center>
             <ul class="tags inline">
               {% if site.tags.first[0] == null %}
@@ -20,37 +19,32 @@ title: Теги
             </ul>
           </center>
         </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-    {% assign i = 0 %}
-    {% assign j = 4 %}
-    <div class="container">
-      {% for tag in site.tags %} 
-        {% assign i = i | plus:1 %}
-        {% if i == j %}
-      <div class="row">
-        {% endif %}
-        <div class="col-md-4 tags-header"> 
-          <h3 id="{{ tag[0] }}-ref" class="">{{ tag[0] }}</h3>
-            <ul>
-              {% for node in tag[1] %}
-                {% if group == null or group == node.group %}
-                  {% if page.url == node.url %}
-              <li class="active"><a href="/{{node.url}}" class="active">{{node.title}}</a></li>
-                  {% else %}
-              <li><a href="/{{node.url}}">{{node.title}}</a></li>
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-              {% assign group = nil %}
-            </ul>
+        {% assign i = 0 %}
+        {% assign j = 4 %}
+        <div class="col-md-4">
+          <div class="container">
+            {% for tag in site.tags %} 
+              {% assign i = i | plus:1 %}
+              {% if i == j %}
+            <div class="row">
+              {% endif %}
+              <div class="col-md-3 tags-block"> 
+                <h3 id="{{ tag[0] }}-ref" class="">{{ tag[0] }}</h3>
+                  {% for node in tag[1] %}
+                    {% if group == null or group == node.group %}
+                  <p><a href="/{{node.url}}">{{node.title}}</a></p>
+                    {% endif %}
+                  {% endfor %}
+                  {% assign group = nil %}
+              </div>
+              {% if i == j %}
+            </div>
+                {% assign j = j | plus:3 %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
-        {% if i == j %}
       </div>
-          {% assign j = j | plus:3 %}
-        {% endif %}
-      {% endfor %}
     </div>
     {% assign i = nil %}
     {% assign j = nil %}
