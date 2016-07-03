@@ -1,3 +1,3 @@
 permalink: posts/:title 
-exclude: ["readme.md"]
+exclude: ["readme.md", "CNAME"]
 highlighter: "rouge"
