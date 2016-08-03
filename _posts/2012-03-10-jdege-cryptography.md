@@ -15,7 +15,7 @@ tags: [cryptography, jdege.us]
 2. <a href='/posts/jdege-python'>Python</a>
 3. <a href='/posts/jdege-cryptography'><b>Криптография</b></a>
 4. <a href='/posts/jdege-text'>Класс Text</a>
-5. Класс Encryption
+5. <a href='/posts/jdege-encryption'>Класс Encryption</a>
 6. Криптоанализ I - Ряд Цифр
 7. Криптоанализ II - Хитрость
 8. Криптоанализ III - Точность
