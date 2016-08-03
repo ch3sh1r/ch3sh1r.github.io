@@ -1,3 +1,15 @@
 permalink: posts/:title 
 exclude: ["readme.md", "CNAME"]
-highlighter: "rouge"
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
