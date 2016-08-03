@@ -11,17 +11,15 @@ tags: [cryptography, jdege.us]
 
 ### Содержание
 
-<ol>
-<li><a href='/posts/jdege'>Введение</a></li>
-<li><a href='/posts/jdege-python'>Python</a></li>
-<li><a href='/posts/jdege-cryptography'>Криптография</a></li>
-<li><a href='/posts/jdege-text'><b>Класс Text</b></a></li>
-<li>Класс Encryption</li>
-<li>Криптоанализ I - Ряд Цифр</li>
-<li>Криптоанализ II - Хитрость</li>
-<li>Криптоанализ III - Точность</li>
-<li>Создание программ</li>
-</ol>
+1. <a href='/posts/jdege'>Введение</a>
+2. <a href='/posts/jdege-python'>Python</a>
+3. <a href='/posts/jdege-cryptography'>Криптография</a>
+4. <a href='/posts/jdege-text'><b>Класс Text</b></a>
+5. Класс Encryption
+6. Криптоанализ I - Ряд Цифр
+7. Криптоанализ II - Хитрость
+8. Криптоанализ III - Точность
+9. Создание программ
 
 Программировать будем от конца к началу, то есть с целью сломать Monome-Dinome
 мы сначала напишем программу для шифрования открытого текста. Затем
@@ -49,21 +47,23 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 
 Запускайте свой интерпретатор и присвойте переменной `plaintext` эту цитату:
 
-    Python 2.4.3 (#1, Jan 21 2009, 01:10:13)
-    [GCC 4.1.2 20071124 (Red Hat 4.1.2-42)] on linux2
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> plaintext = '''As soon as we started programming, we found to our surprise that it wasn't
-    as easy to get programs right as we had thought.  Debugging had to be
-    discovered.  I can remember the exact instant when I realized that a large
-    part of my life from then on was going to be spent in finding mistakes in
-    my own programs.'''
-    >>> print plaintext
-    As soon as we started programming, we found to our surprise that it wasn't
-    as easy to get programs right as we had thought.  Debugging had to be
-    discovered.  I can remember the exact instant when I realized that a large
-    part of my life from then on was going to be spent in finding mistakes in
-    my own programs.
-    >>>
+```python
+Python 2.4.3 (#1, Jan 21 2009, 01:10:13)
+[GCC 4.1.2 20071124 (Red Hat 4.1.2-42)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> plaintext = '''As soon as we started programming, we found to our surprise that it wasn't
+as easy to get programs right as we had thought.  Debugging had to be
+discovered.  I can remember the exact instant when I realized that a large
+part of my life from then on was going to be spent in finding mistakes in
+my own programs.'''
+>>> print plaintext
+As soon as we started programming, we found to our surprise that it wasn't
+as easy to get programs right as we had thought.  Debugging had to be
+discovered.  I can remember the exact instant when I realized that a large
+part of my life from then on was going to be spent in finding mistakes in
+my own programs.
+>>>
+```
 
 Маленькое отступление. Автор и далее с успехом продолжает использовать интерпретатор
 напрямую. Мы же, как дети более светлого времени, воспользуемся достижениями мысли
@@ -72,28 +72,30 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 нам всякие фишки вроде доступной истории команд и автокомплита по коду (а при
 желании и многие [другие](http://habrahabr.ru/blogs/python/117608/)). Итак,
 
-    >> ipython
-    Python 2.7.2+ (default, Oct  4 2011, 20:03:08)
-    Type "copyright", "credits" or "license" for more information.
+```python
+>> ipython
+Python 2.7.2+ (default, Oct  4 2011, 20:03:08)
+Type "copyright", "credits" or "license" for more information.
 
-    IPython 0.10.2 -- An enhanced Interactive Python.
-    ?         -> Introduction and overview of IPython's features.
-    %quickref -> Quick reference.
-    help      -> Python's own help system.
-    object?   -> Details about 'object'. ?object also works, ?? prints more.
+IPython 0.10.2 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object'. ?object also works, ?? prints more.
 
-    In [1]: plaintext = '''As soon as we started programming, we found to our surprise that it wasn't
-       ...:     as easy to get programs right as we had thought.  Debugging had to be
-       ...:     discovered.  I can remember the exact instant when I realized that a large
-       ...:     part of my life from then on was going to be spent in finding mistakes in
-       ...:     my own programs.'''
+In [1]: plaintext = '''As soon as we started programming, we found to our surprise that it wasn't
+   ...:     as easy to get programs right as we had thought.  Debugging had to be
+   ...:     discovered.  I can remember the exact instant when I realized that a large
+   ...:     part of my life from then on was going to be spent in finding mistakes in
+   ...:     my own programs.'''
 
-    In [2]: print plaintext
-    As soon as we started programming, we found to our surprise that it wasn't
-        as easy to get programs right as we had thought.  Debugging had to be
-        discovered.  I can remember the exact instant when I realized that a large
-        part of my life from then on was going to be spent in finding mistakes in
-        my own programs.
+In [2]: print plaintext
+As soon as we started programming, we found to our surprise that it wasn't
+    as easy to get programs right as we had thought.  Debugging had to be
+    discovered.  I can remember the exact instant when I realized that a large
+    part of my life from then on was going to be spent in finding mistakes in
+    my own programs.
+```
 
 Как и в большинстве других языков программирования, в Python кавычки использованы для
 объявления строк. Но есть один нюанс — кавычки бывают двух типов. Тройные кавычки
@@ -103,15 +105,17 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 Теперь можно работать с этой строкой средствами Python, например привести
 к верхнему регистру или посчитать длину:
 
-    In [3]: print plaintext.upper()
-    AS SOON AS WE STARTED PROGRAMMING, WE FOUND TO OUR SURPRISE THAT IT WASN'T
-        AS EASY TO GET PROGRAMS RIGHT AS WE HAD THOUGHT.  DEBUGGING HAD TO BE
-        DISCOVERED.  I CAN REMEMBER THE EXACT INSTANT WHEN I REALIZED THAT A LARGE
-        PART OF MY LIFE FROM THEN ON WAS GOING TO BE SPENT IN FINDING MISTAKES IN
-        MY OWN PROGRAMS.
+```python
+In [3]: print plaintext.upper()
+AS SOON AS WE STARTED PROGRAMMING, WE FOUND TO OUR SURPRISE THAT IT WASN'T
+    AS EASY TO GET PROGRAMS RIGHT AS WE HAD THOUGHT.  DEBUGGING HAD TO BE
+    DISCOVERED.  I CAN REMEMBER THE EXACT INSTANT WHEN I REALIZED THAT A LARGE
+    PART OF MY LIFE FROM THEN ON WAS GOING TO BE SPENT IN FINDING MISTAKES IN
+    MY OWN PROGRAMS.
 
-    In [4]: len(plaintext)
-    Out[4]: 326
+In [4]: len(plaintext)
+Out[4]: 326
+```
 
 Это конечно хорошо, но наш `plaintext` не является строкой в интуитивном
 смысле. Разумеется в скором времени мы будем оперировать им как строкой,
@@ -126,23 +130,25 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 
 Итак, наш первый класс:
 
-    In [5]: class Text:
-       ...:     def __init__(self, text):
-       ...:         self.text = text
-       ...:
-       ...:
+```python
+In [5]: class Text:
+   ...:     def __init__(self, text):
+   ...:         self.text = text
+   ...:
+   ...:
 
-    In [6]: pt = Text(plaintext)
+In [6]: pt = Text(plaintext)
 
-    In [7]: pt
-    Out[7]: <__main__.Text instance at 0x98a29ac>
+In [7]: pt
+Out[7]: <__main__.Text instance at 0x98a29ac>
 
-    In [8]: print pt.text
-    As soon as we started programming, we found to our surprise that it wasn't
-        as easy to get programs right as we had thought.  Debugging had to be
-        discovered.  I can remember the exact instant when I realized that a large
-        part of my life from then on was going to be spent in finding mistakes in
-        my own programs.
+In [8]: print pt.text
+As soon as we started programming, we found to our surprise that it wasn't
+    as easy to get programs right as we had thought.  Debugging had to be
+    discovered.  I can remember the exact instant when I realized that a large
+    part of my life from then on was going to be spent in finding mistakes in
+    my own programs.
+```
 
 Класс — это контейнер для данных и методов работы с этими данными.
 Наш `Text` состоит из переменной `text` и метода `__init__()`. `__init__()` —
@@ -153,18 +159,20 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 А нужна вся это объектная ориентированность для возможности на лету
 конструировать много объектов со схожими свойствами:
 
-    In [9]: pt2 = Text("Another text")
+```python
+In [9]: pt2 = Text("Another text")
 
-    In [10]: pt2.text
-    Out[10]: 'Another text'
+In [10]: pt2.text
+Out[10]: 'Another text'
 
-    In [11]: print pt.text
-    As soon as we started programming, we found to our surprise that it wasn't
-        as easy to get programs right as we had thought.  Debugging had to be
-        discovered.  I can remember the exact instant when I realized that a large
-        part of my life from then on was going to be spent in finding mistakes in
-        part of my life from then on was going to be spent in finding mistakes in
-        my own programs.
+In [11]: print pt.text
+As soon as we started programming, we found to our surprise that it wasn't
+    as easy to get programs right as we had thought.  Debugging had to be
+    discovered.  I can remember the exact instant when I realized that a large
+    part of my life from then on was going to be spent in finding mistakes in
+    part of my life from then on was going to be spent in finding mistakes in
+    my own programs.
+```
 
 Но эти объекты существуют только в памяти интерпретатора и превратятся
 в историю сразу после выхода. Если же нам необходимо использовать их
@@ -176,33 +184,37 @@ own programs.” Maurice Wilkes, конструктор EDSAC, 1949.
 описание классов/функций, и лишь маленький кусочек — инструкции по работе с ними.
 Чтобы создать модуль, откроем любимый текстовый редактор и запишем следущее:
 
-{% highlight python %}
+```python
 class Text:
     def __init__(self, text):
         self.text = text
-{% endhighlight %}
+```
 
 Теперь сохраняем все это под именем `crypto.py` в той же директории из которой
 запускаем iPython. Отныне командой `from crypto import *` мы возвращаем
 все наши объекты к жизни:
 
-    In [1]: from crypto import *
+```python
+In [1]: from crypto import *
 
-    In [2]: pt = Text("This is a text")
+In [2]: pt = Text("This is a text")
 
-    In [3]: print pt.text
-    This is a text
+In [3]: print pt.text
+This is a text
+```
 
 Осталось заметить, что такой метод импорта расходится с Дао Python, в котором
 пространства имен провозглашаются неплохой идеей (я вполне серьезен, попробуйте
 дать интерпретатору команду `import this`). Правильнее поступать так:
 
-    In [1]: import crypto
+```python
+In [1]: import crypto
 
-    In [2]: pt = crypto.Text("This is another text")
+In [2]: pt = crypto.Text("This is another text")
 
-    In [3]: print pt.text
-    This is another text
+In [3]: print pt.text
+This is another text
+```
 
 ### Загрузка из файла
 
@@ -212,17 +224,19 @@ class Text:
 Для претворения этого плана в жизнь файл `crypto.py` должен выглядеть
 как то так:
 
-    class Text:
-        def __init__(self, filename):
-            self.text = ""
+```python
+class Text:
+    def __init__(self, filename):
+        self.text = ""
 
-        def load(self, filename):
-            fp = open(filename)
-            self.text = fp.read()
-            fp.close
+    def load(self, filename):
+        fp = open(filename)
+        self.text = fp.read()
+        fp.close
 
-        def __str__(self):
-            return self.text
+    def __str__(self):
+        return self.text
+```
 
 Здесь `__str__()` — еще одно ключевое слово, за которым следует описание
 поведения нашего класса в строковом контексте. А контекст — очередная
@@ -233,17 +247,19 @@ class Text:
 Запишем исследуемую цитату в файл, назовем его `plain.txt` и опробуем
 на нем новый модуль:
 
-    In [4]: reload(crypto)
-    Out[4]: <module 'crypto' from 'crypto.pyc'>
+```python
+In [4]: reload(crypto)
+Out[4]: <module 'crypto' from 'crypto.pyc'>
 
-    In [5]: pt = crypto.Text("plain.txt")
+In [5]: pt = crypto.Text("plain.txt")
 
-    In [6]: print pt
-    As soon as we started programming, we found to our surprise that it wasn't
-    as easy to get programs right as we had thought.  Debugging had to be
-    discovered.  I can remember the exact instant when I realized that a large
-    part of my life from then on was going to be spent in finding mistakes in
-    my own programs.
+In [6]: print pt
+As soon as we started programming, we found to our surprise that it wasn't
+as easy to get programs right as we had thought.  Debugging had to be
+discovered.  I can remember the exact instant when I realized that a large
+part of my life from then on was going to be spent in finding mistakes in
+my own programs.
+```
 
 ### Форматирование вывода
 
@@ -253,66 +269,74 @@ class Text:
 со строками нам уже известны, так напишем же с их помощью функцию конвертирования
 текста в необходимую форму:
 
-    class Text:
-        def __init__(self, filename):
-            self.load(filename)
+```python
+class Text:
+    def __init__(self, filename):
+        self.load(filename)
 
-        def load(self, filename):
-            fp = open(filename)
-            self.rawtext = fp.read()
-            fp.close
-            self.text = self.convert(self.rawtext)
+    def load(self, filename):
+        fp = open(filename)
+        self.rawtext = fp.read()
+        fp.close
+        self.text = self.convert(self.rawtext)
 
-        def convert(self, txt):
-            rval = ""
-            for c in txt.upper():
-                if c.isalpha():
-                    rval += c
-            return rval
+    def convert(self, txt):
+        rval = ""
+        for c in txt.upper():
+            if c.isalpha():
+                rval += c
+        return rval
 
-        def __str__(self):
-            return self.text
+    def __str__(self):
+        return self.text
+```
 
 Теперь метод `__str__()` возвращает все буквы из текста в верхнем регистре:
 
-    In [7]: reload(crypto)
-    Out[7]: <module 'crypto' from 'crypto.pyc'>
+```python
+In [7]: reload(crypto)
+Out[7]: <module 'crypto' from 'crypto.pyc'>
 
-    In [8]: pt = crypto.Text("plain.txt")
+In [8]: pt = crypto.Text("plain.txt")
 
-    In [9]: print pt
-    ASSOONASWESTARTEDPROGRAMMINGWEFOUNDTOOURSURPRISETHATITWASNTASEASYTOGETPROGRAMSRIGHTASWEHADTHOUGHTDEBUGGINGHADTOBEDISCOVEREDICANREMEMBERTHEEXACTINSTANTWHENIREALIZEDTHATALARGEPARTOFMYLIFEFROMTHENONWASGOINGTOBESPENTINFINDINGMISTAKESINMYOWNPROGRAMS
+In [9]: print pt
+ASSOONASWESTARTEDPROGRAMMINGWEFOUNDTOOURSURPRISETHATITWASNTASEASYTOGETPROGRAMSRIGHTASWEHADTHOUGHTDEBUGGINGHADTOBEDISCOVEREDICANREMEMBERTHEEXACTINSTANTWHENIREALIZEDTHATALARGEPARTOFMYLIFEFROMTHENONWASGOINGTOBESPENTINFINDINGMISTAKESINMYOWNPROGRAMS
+```
 
 С этим уже можно работать. Осталось только чуть-чуть подкорректировать вывод
 так, чтобы одновременно не мешало действиям алгоритма и не резало глаз человека.
 Пусть `__str__()` печатает группами по пять символов, по двенадцать групп
 в строку:
 
-    def __str__(self):
-        rval = ""
-        pos = 0
-        for c in self.text:
-            rval += c
-            pos += 1
-            if pos % 60 == 0:
-                rval += '\n'
-            elif pos % 5 == 0:
-                rval += " "
-        return rval
+```python
+def __str__(self):
+    rval = ""
+    pos = 0
+    for c in self.text:
+        rval += c
+        pos += 1
+        if pos % 60 == 0:
+            rval += '\n'
+        elif pos % 5 == 0:
+            rval += " "
+    return rval
+```
 
 Компактно и внушает уважение наблюдателям.
 
-    In [10]: reload(crypto)
-    Out[10]: <module 'crypto' from 'crypto.pyc'>
+```python
+In [10]: reload(crypto)
+Out[10]: <module 'crypto' from 'crypto.pyc'>
 
-    In [11]: pt = crypto.Text("plain.txt")
+In [11]: pt = crypto.Text("plain.txt")
 
-    In [12]: print pt
-    ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
-    SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
-    REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
-    YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
-    RAMS
+In [12]: print pt
+ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
+SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
+REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
+YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
+RAMS
+```
 
 ### Первая программа
 
@@ -329,37 +353,43 @@ class Text:
 качестве модуля. Чтобы такого не происходило, введем в использование
 еще парочку кодовых слов Python:
 
-    if __name__ == "__main__":
-        txt = Text('plain.txt')
-        txt.load('plain.txt')
-        print txt
+```python
+if __name__ == "__main__":
+    txt = Text('plain.txt')
+    txt.load('plain.txt')
+    print txt
+```
 
 Переменная `__main__` принимает значение `"__name__"` только когда
 файл исполняется интерпретатором. Это и позволяет использовать написанные
 программы как библиотеки а библиотеки как программы.
 
-    >> python crypto.py
-    ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
-    SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
-    REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
-    YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
-    RAMS
-    >>
+```python
+>> python crypto.py
+ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
+SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
+REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
+YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
+RAMS
+>>
+```
 
 И добавим очевидное — пусть имя обрабатываемого файла передается как параметр:
 
-    #!/usr/bin/env python
-    import sys
+```python
+#!/usr/bin/env python
+import sys
 
-    #...тут все без изменений...
+#...тут все без изменений...
 
-    if __name__ == "__main__":
-        if len(sys.argv) == 2:
-            txt = Text(sys.argv[1])
-        else:
-            print "Usage: crypto.py <filename>"
-            sys.exit(1)
-        print txt
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        txt = Text(sys.argv[1])
+    else:
+        print "Usage: crypto.py <filename>"
+        sys.exit(1)
+    print txt
+```
 
 Итак, всего два нововведения. Во-первых, мы добавили юниксовый
 "shebang" комментарий, который и позволяет в Unix запускать программу не передавая
@@ -376,12 +406,14 @@ class Text:
 имя запущенной программы, а первый содержит единственный в нашем случае
 аргумент.
 
-    >> python ./crypto.py
-    Usage: crypto.py <filename>
-    >> python crypto.py plain.txt
-    ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
-    SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
-    REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
-    YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
-    RAMS
-    >>
+```python
+>> python ./crypto.py
+Usage: crypto.py <filename>
+>> python crypto.py plain.txt
+ASSOO NASWE START EDPRO GRAMM INGWE FOUND TOOUR SURPR ISETH ATITW ASNTA
+SEASY TOGET PROGR AMSRI GHTAS WEHAD THOUG HTDEB UGGIN GHADT OBEDI SCOVE
+REDIC ANREM EMBER THEEX ACTIN STANT WHENI REALI ZEDTH ATALA RGEPA RTOFM
+YLIFE FROMT HENON WASGO INGTO BESPE NTINF INDIN GMIST AKESI NMYOW NPROG
+RAMS
+>>
+```

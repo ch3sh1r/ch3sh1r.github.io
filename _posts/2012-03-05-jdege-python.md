@@ -11,17 +11,15 @@ tags: [cryptography, jdege.us]
 
 ### Содержание
 
-<ol>
-<li><a href='/posts/jdege'>Введение</a></li>
-<li><a href='/posts/jdege-python'><b>Python</b></a></li>
-<li><a href='/posts/jdege-cryptography'>Криптография</a></li>
-<li><a href='/posts/jdege-text'>Класс Text</a></li>
-<li>Класс Encryption</li>
-<li>Криптоанализ I - Ряд Цифр</li>
-<li>Криптоанализ II - Хитрость</li>
-<li>Криптоанализ III - Точность</li>
-<li>Создание программ</li>
-</ol>
+1. <a href='/posts/jdege'>Введение</a>
+2. <a href='/posts/jdege-python'><b>Python</b></a>
+3. <a href='/posts/jdege-cryptography'>Криптография</a>
+4. <a href='/posts/jdege-text'>Класс Text</a>
+5. Класс Encryption
+6. Криптоанализ I - Ряд Цифр
+7. Криптоанализ II - Хитрость
+8. Криптоанализ III - Точность
+9. Создание программ
 
 Python — скриптовый язык. На практике, это во-первых значит что он [интерпретируем](
 http://ru.wikipedia.org/wiki/Интерпретируемый_язык_программирования).
@@ -44,8 +42,8 @@ Python не требует существования программы в ви
 не знакомы с этим языком, стоит посмотреть специальные курсы, многие из которых
 доступны в сети. Jeffrey советует такие:
 
-- Swaroop C H "A Byte of Python"
-- Allen B. Downey "Think Python, How to think like a Computer Scientist"
+* Swaroop C H "A Byte of Python"
+* Allen B. Downey "Think Python, How to think like a Computer Scientist"
 
 От себя добавлю "[Dive into Python](http://www.diveintopython.net/)", частично переведенный
 на [русский](http://diveinto.python.ru/toc.html) и "[Язык программирования Python](
@@ -54,11 +52,9 @@ http://www.python.ru/files/book-ods.pdf)", в создании которого 
 
 ### Три способа запуска кода
 
-<ol>
-<li>Напечатать в интерпретаторе</li>
-<li>Сохранить в файл и передать интерпретатору</li>
-<li>Сохранить в файл и вызвать сохраненное из другой программы</li>
-</ol>
+1. Напечатать в интерпретаторе
+2. Сохранить в файл и передать интерпретатору
+3. Сохранить в файл и вызвать сохраненное из другой программы
 
 Первый способ — могучая способность Python'а и многих других интерпретируемых языков.
 В миру это приятная возможность выдрать кусок кода и рассмотреть под лупой как он
