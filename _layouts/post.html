@@ -1,19 +1,8 @@
 ---
 layout: default
 ---
-<div class="page-header">
-  <div class="container">
-    <div class="row">
-      <div class="blog-header">
-        <div class="col-md-6">
-          <h2>{{page.title}}</h2>
-        </div>
-        <div class="col-md-6">
-          <h3><a href="/">@ch3sh1r blogs.</a></h3>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container page-header">
+  <h1>{{page.title}}</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -22,45 +11,36 @@ layout: default
     </div>
     <div class="col-md-3">
       <center>
-        <figure class="kudo kudoable" data-id="1">
-          <a class="kudobject">
-            <div class="opening">
-              <div class="circle">&nbsp;</div>
-            </div>
-          </a>
-          <a href="#kudo" class="count">
-            <span class="num">∴ </span>
-            <span class="txt">kudos</span>
-          </a>
-        </figure>
+        <a href='/'><img src='/static/img/smile.png'></a>
         <hr />
         <h4 class="tags">tags</h4>
         {% unless page.tags == empty %}
           <ul class="tags">
             {% assign tags_list = page.tags %}
             {% if tags_list.first[0] == null %}
-              {% for tag in tags_list %} 
+              {% for tag in tags_list %}
                 <li><a href="/tags.html#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
               {% endfor %}
             {% else %}
-              {% for tag in tags_list %} 
+              {% for tag in tags_list %}
                 <li><a href="/tags.html#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
               {% endfor %}
             {% endif %}
             {% assign tags_list = nil %}
           </ul>
-        {%endunless%}  
+        {%endunless%}
         <hr />
-          <div class="social">
-            <a href="https://twitter.com/ch3sh1r"><span class='symbol'>circletwitterbird</span></a>
-            <a href="https://github.com/ch3sh1r"><span class='symbol'>circlegithubalt</span></a>
-            <a href="http://feeds.feedburner.com/ch3sh1r?format=xml"><span class='symbol'>circlerss</span></a>
-          </div>
-        <hr />
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed">
-          <img alt="Creative Commons License" style="border-width:0" src="/static/img/cc-by-sa.png" />
-        </a>
-        <br />
+        <div class="social">
+          <a href="https://twitter.com/ch3sh1r">
+            <i class="fa fa-twitter-square"></i>
+          </a>
+          <a href="https://github.com/ch3sh1r">
+            <i class="fa fa-github-square"></i>
+          </a>
+          <a href="http://feeds.feedburner.com/ch3sh1r?format=xml">
+            <i class="fa fa-rss-square"></i>
+          </a>
+        </div>
       </center>
     </div>
   </div>

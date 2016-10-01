@@ -17,30 +17,16 @@
     <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/ch3sh1r" />
 
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/static/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/8f113412d0.js"></script>
   </head>
   <body>
     {{content}}
-    <script src="/static/js/jquery.js"></script>
-    <script src="/static/js/jstorage.js"></script>
-    <script src="/static/js/kudos.js"></script>
-    <script src="/static/js/parse.min.js"></script>
-    <script src="/static/js/parse-kudos.js"></script>
-
     {% assign tags_list = page.tags %}
-    {% for tag in tags_list %} 
-      {% if tag == "math" %}
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
-          });
-        </script>
-        <script type="text/javascript" src="/static/js/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
-      {% endif %}
-    {% endfor %}
-
     <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
