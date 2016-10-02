@@ -1,16 +1,15 @@
 ---
-layout: page
-title: These aren't the page your looking for
+layout: error
 ---
 <center>
-  But here cat for you
-  <br />
+  <h1>These aren't the page you'r looking for</h1>
+  <hr />
   <script type="text/javascript">
     var cats = new Array("purr", "shhh", "walk");
     document.write(
-            '<img src="/static/img/404' + 
-            cats[Math.floor(Math.random() * cats.length)] + 
-            '.gif">'); 
+            '<img src="/static/img/404"' +
+            cats[Math.floor(Math.random() * cats.length)] +
+            '.gif">');
     document.close();
   </script>
 </center>
