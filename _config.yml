@@ -4,6 +4,8 @@ lsi: false
 safe: true
 incremental: false
 highlighter: rouge
+url: https://rxtx.wtf
+enforce_ssl: rxtx.wtf
 gist:
   noscript: false
 kramdown:

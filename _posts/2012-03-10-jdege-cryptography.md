@@ -4,22 +4,21 @@ title: "Криптография"
 abstract: "Краткий брифинг и разбор шифра Monome-Dinome."
 tags: [cryptography, jdege.us]
 ---
-> Вы видите перед собой вольный перевод [курса](http://jdege.us/
-> crypto-python/index.html) за авторством Jeffrey Dege.
-> Это значит, что все права на текст принадлежат автору, а в ошибках,
-> скорее всего, стоит винить переводчика.
+> Это вольный перевод
+> [курса статей](http://jdege.us/crypto-python/index.html)
+> за авторством Jeffrey Dege.
 
 ### Содержание
 
-1. <a href='/posts/jdege'>Введение</a>
-2. <a href='/posts/jdege-python'>Python</a>
-3. <a href='/posts/jdege-cryptography'><b>Криптография</b></a>
-4. <a href='/posts/jdege-text'>Класс Text</a>
-5. <a href='/posts/jdege-encryption'>Класс Encryption</a>
-6. Криптоанализ I - Ряд Цифр
-7. Криптоанализ II - Хитрость
-8. Криптоанализ III - Точность
-9. Создание программ
+1. [Введение](/posts/jdege)
+2. [Python](/posts/jdege-python)
+3. [*Криптография*](/posts/jdege-cryptography)
+4. [Класс Text](/posts/jdege-text)
+5. [Класс Encryption](/posts/jdege-encryption)
+6. [Криптоанализ I - Числа](/posts/jdege-cryptanalysis-1)
+7. [Криптоанализ II - Фокус](/posts/jdege-cryptanalysis-2)
+8. [Криптоанализ III - Точность](/posts/jdege-cryptanalysis-3)
+9. [Программирование](/posts/jdege-programming)
 
 Предполагается, что вы и без этого курса понимаете основы и ориентируетесь в терминологии
 криптографии. Например, знаете о частотном анализе и понимаете метод его
