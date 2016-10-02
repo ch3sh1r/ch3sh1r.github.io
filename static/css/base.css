@@ -112,10 +112,13 @@
     text-decoration:none;
   }
 
-.social a {
-  color:#1f003f;
-  text-decoration:none;
-}
+.social {
+  letter-spacing: 10px;
+  }
+  .social a {
+    color:#1f003f;
+    text-decoration:none;
+  }
   .social a:hover {
     color:#130027;
     text-decoration:none;
