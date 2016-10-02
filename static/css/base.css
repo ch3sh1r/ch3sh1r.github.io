@@ -9,18 +9,6 @@
   font-style:normal;
 }
 
-@font-face {
-  font-family:'MonoSocialIcons';
-  src:url('/static/font/MonoSocialIcons.eot');
-  src:url('/static/font/MonoSocialIcons.eot?#iefix') format('embedded-opentype'),
-       url('/static/font/MonoSocialIcons.woff') format('woff'),
-       url('/static/font/MonoSocialIcons.ttf') format('truetype'),
-       url('/static/font/MonoSocialIcons.svg#MonoSocialIcons') format('svg');
-  src:url('/static/font/MonoSocialIcons.ttf') format('truetype');
-  font-weight:normal;
-  font-style:normal;
-}
-
 .blog-header {
   font-family:Silkscreen;
   color:#310062;
@@ -66,34 +54,6 @@
     float:right;
     text-transform:uppercase;
     font-size:14px;
-  }
-
-.blog-feedback{
-  margin:5px 5px;
-  background-color:#f1f1f1;
-  background-image:-moz-linear-gradient(#fafafa, #f1f1f1);
-  background-image:-webkit-linear-gradient(#fafafa, #f1f1f1);
-  background-image:linear-gradient(#fafafa, #f1f1f1);
-  background-repeat:repeat-x;
-  border:1px solid #ddd;
-  border-bottom-color:#ccc;
-  border-radius:3px;
-  box-shadow:inset 0 1px 0 #fff, 0 1px 5px #f1f1f1
-}
-  .blog-feedback-header{
-    background:url("/static/img/twitter.png") 10px 3px no-repeat;
-    background-size:38px auto;
-    margin:0;
-    padding:3px;
-    border-bottom:1px solid #ddd;
-    box-shadow:0 1px 0 #fff;
-    font-size:14px;
-    font-weight:bold
-  }
-  .blog-feedback-description{
-    margin:0;
-    padding:10px;
-    color:#999
   }
 
 .tags {
@@ -152,41 +112,13 @@
     text-decoration:none;
   }
 
-.social{
-  font-size:50px;
+.social a {
+  color:#1f003f;
+  text-decoration:none;
 }
-  .social a {
-    color:#1f003f;
-    text-decoration:none;
-  }
   .social a:hover {
     color:#130027;
     text-decoration:none;
-  }
-
-.symbol, a.symbol:before {
-    font-family:'MonoSocialIcons';
-    -webkit-text-rendering:optimizeLegibility;
-    -moz-text-rendering:optimizeLegibility;
-    -ms-text-rendering:optimizeLegibility;
-    -o-text-rendering:optimizeLegibility;
-    text-rendering:optimizeLegibility;
-    -webkit-font-smoothing:antialiased;
-    -moz-font-smoothing:antialiased;
-    -ms-font-smoothing:antialiased;
-    -o-font-smoothing:antialiased;
-    font-smoothing:antialiased;
-}
-  a.symbol:before {
-      content:attr(title);
-      margin-right:0.3em;
-      font-size:130%;
-  }
-  a.symbol {
-      background:#9f9f9f;
-      padding:7px 5px 3px 5px;
-      color:white;
-      text-decoration:none;
   }
 
 div.opening {
