@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/ch3sh1r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://rxtx.wtf
+  * I am ch3sh1r (https://keybase.io/ch3sh1r) on keybase.
+  * I have a public key with fingerprint FE4B 75C7 5329 E509 1FA2  6848 66BA 2FAB 7B93 AB55
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120c2a9c3e21881198961be0d03b74ce5df6a096c9bb396fdeface5903aa3770b3a0a",
+            "fingerprint": "fe4b75c75329e5091fa2684866ba2fab7b93ab55",
+            "host": "keybase.io",
+            "key_id": "66ba2fab7b93ab55",
+            "kid": "0101ba113ade968ab294e9aaa3eeb49913d9bda79e57d35a2d7d6c7cd8e1da809aba0a",
+            "uid": "21808b83827bd486d260e84d76f5a519",
+            "username": "ch3sh1r"
+        },
+        "service": {
+            "hostname": "rxtx.wtf",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485606075,
+    "expire_in": 157680000,
+    "prev": "9129d466cce98475b14d5d7fbb250d532c389f6614c5569cea1f1d1460b38c1d",
+    "seqno": 16,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMNrAnicbVJrUFVVGAUEJMAAYTCC6cfBhiYYPPu8NzQOjBDSQ6BGkOd177P3gQN4
+L957gUuAEw1GDTAmgZoRhU3USOioPRDGBISKYGwoGCEhcFAIe2AWWElT55L+a//Z
+s9estb71fd8e3LTBxdtV69nWWfl6527Xkf6mUpc9DQ29lQy2kAomppIpousXLSbU
+ZjcV6YSJYVjAsSqHoMpTDigKAFCBEsCUJSyPZUGlItEkxEJJhRjzUNII1ZCBQpZH
+iJdlFvOIRUwUo+nmfGotsepmu2GrUQHLoiqLPAepyEKgIU5SBEWSMOI0hGUMeYRF
+0RAWWGxOhREOIxuN1i0GZjxM6/H+h38/NwswAoBHhEJJQZiDAoXIyEQpFiAEPIGY
+INmoLhNeRByRiaTKKlEoIEhhIcL/5S5dtzN6ZxWs8AonY2LEJJzEUkUgsqSJSATQ
+SbRRqxntowZbLeBtBcDKVEcxBlimq9Q5V2cj9whWh90RXW7XDFmJ1WK3qJZiAy2w
+20tinCJ7RYmTVU6x6Z7ehHUzMSZoCMqo1aZbzEwMMJiqXXcaAkERJVZiZTGKoY4S
+3UpNupMhypLCGsdZhpYZlhBwkAiSpKoUKoIsYiAQkcgaxpzIEmMbKq9ATZKAoIqi
+BFWKgAYIECRjj4oKCOPsaL/ZYnhLRk6Ub3ja9HwzspdaKVM90J/j7uLq7eLp4eb8
+Wi7eD/jf/3DnWb81v97gjW0zS5NbaEDNgSBlamn6r3NHv1s9kviya3rbTvMT7sNp
+PkV/9/ycOpR7MjhzS8iLVcrQoW+HX3q6aUSov9ny1sIl+ExP6prPI/O9vwzHXl6d
+CwVcWrf/mHAici7zg2gxkWzKaHnu8N2wxqQkdbnR49Sufc2+Xm7PD9b+NDRf45/9
+SqzbfJ+3V15vl75me20rV/yhNPRqY0XDJ0cL+3YcvCLXmztv367N67uTteDlNyAs
+eyQ4fLTZpamZsSevdR/rqA49kb/c4NtZO77zj1O3zNEj1cFVyUcSRwZik70H3Gry
+UyemWz/jdz2VMp6SELH4Ak5d3D89evrxa2XnRZx6J+DHK23uv4Xv+Xhk9szu+JnM
+tRtdjsTW/knPFNhcB2593xGYOxGWV/1QpjLXHtuwKIRNdJ1c+nWUv9maHnhs+9tJ
+V0lR1Nc5GVWLEd0hnWbP8vDRi31fxX3U7n1hofnsO587VjI9Nl//dCXeca74PdO4
+p2trglSWyEU9+s2zVQcC4iKvFv7Q2ZN9w2tjsBKy943sh9/MC3fkhOZuH8LxKUv6
+5IMXpwYT86OzfXN6VqvS7OVRO4Kum/sOBppgRN27k+rkdNPCYVCYWnq8MZt2DH7x
+z2PWbXGzxUF/WjOOe2y+HNm+IfnL7pbu03vT3++r+33rpbPDA1nucQmh0VW9d+t7
+z6xcKJ0YW876F7qJwTQ=
+=EeB8
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ch3sh1r
+
+==================================================================
