@@ -2,7 +2,7 @@
 layout: post
 title: "Python"
 abstract: "Мотивация использования Python в криптографии."
-tags: [cryptography, jdege.us]
+tags: [crypto, jdege]
 ---
 > Это вольный перевод
 > [курса статей](http://jdege.us/crypto-python/index.html)
@@ -11,7 +11,7 @@ tags: [cryptography, jdege.us]
 ### Содержание
 
 1. [Введение](/posts/jdege)
-2. [*Python*](/posts/jdege-python)
+2. [**Python**](/posts/jdege-python)
 3. [Криптография](/posts/jdege-cryptography)
 4. [Класс Text](/posts/jdege-text)
 5. [Класс Encryption](/posts/jdege-encryption)

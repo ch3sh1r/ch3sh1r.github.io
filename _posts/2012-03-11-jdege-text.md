@@ -2,7 +2,7 @@
 layout: post
 title: "Класс Text"
 abstract: "Разбор модуля для работы с текстом."
-tags: [cryptography, jdege.us]
+tags: [crypto, jdege]
 ---
 > Это вольный перевод
 > [курса статей](http://jdege.us/crypto-python/index.html)
@@ -13,7 +13,7 @@ tags: [cryptography, jdege.us]
 1. [Введение](/posts/jdege)
 2. [Python](/posts/jdege-python)
 3. [Криптография](/posts/jdege-cryptography)
-4. [*Класс Text*](/posts/jdege-text)
+4. [**Класс Text**](/posts/jdege-text)
 5. [Класс Encryption](/posts/jdege-encryption)
 6. [Криптоанализ I - Числа](/posts/jdege-cryptanalysis-1)
 7. [Криптоанализ II - Фокус](/posts/jdege-cryptanalysis-2)

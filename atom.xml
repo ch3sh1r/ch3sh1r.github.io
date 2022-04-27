@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>@ch3sh1r blogs.</title>
  <link href="http://rxtx.wtf/atom.xml" rel="self"/>
- <link href="http://rxtx.wtf"/>
+ <link href="http://rxtx.wtf/blog"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://rxtx.wtf</id>
+ <id>https://rxtx.wtf/blog</id>
  <author>
    <name>Alexey Bednyakov</name>
  </author>
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://rxtx.wtf/{{ post.url }}"/>
+   <link href="https://rxtx.wtf/{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://rxtx.wtf/{{ post.id }}</id>
+   <id>https://rxtx.wtf/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
