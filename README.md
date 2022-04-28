@@ -7,8 +7,6 @@ powered with:
   by [@twitter](https://github.com/twitter),
 * [Jekyll Bootstrap](http://jekyllbootstrap.com)
   by [@mojombo](https://github.com/mojombo),
-* [Kudos](https://github.com/masukomi/kudos)
-  by [@masukomi](https://github.com/masukomi),
 * [Mono Social Icons Font](http://drinchev.github.io/monosocialiconsfont)
   by [@drinchev](https://github.com/drinchev),
 * [Silkscreen Font](http://kottke.org/plus/type/silkscreen)
