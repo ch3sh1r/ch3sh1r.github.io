@@ -6,7 +6,7 @@
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>https://rxtx.wtf/blog</id>
  <author>
-   <name>Alexey Bednyakov</name>
+   <name>Aleksei Bedniakov</name>
  </author>
  {% for post in site.posts %}
  <entry>
